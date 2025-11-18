@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+:root{
+  --pink: rgb(255, 160, 190);
+  --light-pink: rgb(255, 200, 221);
+  --blue: rgb(189, 224, 254);
+  --green: rgb(209, 244, 224);
+  --clr-tx: rgb(42, 42, 42);
+  --clr-title: rgb(255, 255, 255);
+  --radius: 18px;
+
+  --fs: 16px;
+
+  font-size: var(--fs);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Special Elite", system-ui;
+}
+
+body {
+  background-color: var(--light-pink);
+  color: var(--clr-tx);
+}
+
+header {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  background-color: var(--pink);
+  width: 100%;
+  min-height: clamp(100px, 12dvh, 170px);
+  padding: 10px 2%;
+
+  z-index: 1;
+}
+
+#link-home {
+  color: var(--clr-title);
+}
+
+header>nav {
+  position: absolute;
+  right: 2%;
+}
+
+main {
+  padding-top: clamp(150px, 10vh, 200px);
+  margin-left: clamp(2%, 10vw, 30%);
+  margin-right: clamp(2%, 10vw, 30%);
+}
+
+
+h1 {
+  font-size: clamp(2rem, 4vw, 5rem);
+  line-height: 1.15;
+  font-weight: 700;
+
+  color: var(--clr-title);
+}
+
+h2 {
+  font-size: clamp(2rem, 3vw, 3.5rem);
+  line-height: 1.2;
+  font-weight: bold;
+
+  color: var(--clr-title);
+}
+
+h3 {
+  font-size: clamp(1.4rem, 2.2vw, 2.2rem);
+  line-height: 1.2;
+  font-weight: bold;
+
+  color: var(--clr-title)
+}
+
+p {
+  font-size: clamp(0.95rem, 1.1vw, 1.25rem);
+  line-height: 1.55;
+}
+
+a {
+  color: var(--clr-tx);
+  text-decoration: none;
+  font-size: clamp(1.5rem, 1.2vw, 1.8rem);
+  font-weight: 600;
+
+  padding: 10px;
+}
+
+.code {
+  font-size: clamp(1.1rem, 1.3vw, 1.4rem);
+  font-weight: 700;
+}
+
+footer {
+  background-color: var(--green);
+  font-size: clamp(0.9rem, 1vw, 1.1rem);
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1dvh;
+
+  min-height: clamp(70px, 12dvh, 130px);
+  padding: 10px 2%;
+}
+
+footer>.contact {
+  display: flex;
+  align-items: center;
+  gap: 2%;
+
+  font-weight: bold;
+}

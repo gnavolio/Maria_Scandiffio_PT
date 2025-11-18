@@ -1,0 +1,82 @@
+:root{
+  --pink: rgb(255, 160, 190);
+  --light-pink: rgb(255, 200, 221);
+  --blue: rgb(189, 224, 254);
+  --green: rgb(209, 244, 224);
+  --clr-tx: rgb(42, 42, 42);
+  --clr-title: rgb(255, 255, 255);
+  --radius: 18px;
+
+  --fs: 16px;
+
+  font-size: var(--fs);
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    grid-template-areas: 
+    "hero-name hero-image"
+    "hero-quote hero-image";
+}
+
+h1 {
+    display: flex;
+    flex-direction: column;
+
+    justify-self: start;
+    grid-area: hero-name;
+
+    margin-top: clamp(20px, 4vw, 60px);
+}
+
+.name {
+    background-color: var(--green);
+    width: fit-content;
+    padding-left: clamp(1.8rem, 3.2vw, 3rem);
+    padding-right: clamp(1.8rem, 3.2vw, 3rem);
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    border-radius: var(--radius);
+}
+
+.surname {
+    background-color: var(--blue);
+    width: fit-content;
+    padding: 10px 2%;
+    margin-left: clamp(2rem, 15dvw, 5rem);
+    padding-left: clamp(1.8rem, 3.2vw, 3rem);
+    padding-right: clamp(1.8rem, 3.2vw, 3rem);
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    border-radius: var(--radius);
+}
+
+.hero>p {
+    font-size: clamp(1.4rem, 2.2vw, 2rem);
+
+    grid-area: hero-quote;
+    justify-self: end;
+    align-content: center;
+
+    white-space: nowrap;
+}
+
+.hero>figure {
+    grid-area: hero-image;
+    align-content: end;
+}
+
+.hero > figure > img {
+    height: clamp(200px, 60vw, 1000px);
+}
+
+
+.intro-section {
+    transform: translateY(-1%);
+    background-color: var(--blue);
+}
+
