@@ -33,9 +33,9 @@ header {
   background-color: var(--pink);
   width: 100%;
   min-height: clamp(100px, 12dvh, 170px);
-  padding: 10px 2%;
+  padding: 10px;
 
-  z-index: 1;
+  z-index: 10;
 }
 
 #link-home {
@@ -48,9 +48,9 @@ header>nav {
 }
 
 main {
-  padding-top: clamp(150px, 10vh, 200px);
-  margin-left: clamp(2%, 10vw, 30%);
-  margin-right: clamp(2%, 10vw, 30%);
+  padding-top: clamp(130px, 12dvh, 170px);
+  margin-left: clamp(10px, 2vw, 30px);
+  margin-right: clamp(10px, 2vw, 30px);
 }
 
 
@@ -116,4 +116,8 @@ footer>.contact {
   gap: 2%;
 
   font-weight: bold;
+}
+
+.box-shadow {
+  box-shadow: 5px 5px 5px var(--clr-shadow);
 }
