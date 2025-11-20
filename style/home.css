@@ -13,6 +13,11 @@
   font-size: var(--fs);
 }
 
+#link-home {
+  color: var(--clr-title);
+  border-bottom: 1px solid var(--clr-title);
+}
+
 .hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -60,7 +65,7 @@ h1 {
 }
 
 .hero > p {
-    font-size: clamp(0.8rem, 2.2vw, 1.5rem);
+    font-size: clamp(1rem, 2.2vw, 1.5rem);
 
     grid-area: hero-quote;
     justify-self: end;
@@ -104,7 +109,6 @@ h1 {
     margin: 0;
     padding: 0;
     background-color: var(--blue);
-
 }
 
 .triangle-up {
@@ -226,7 +230,8 @@ h1 {
     transition: all 0.5s;
 }
 
-.sponsor:hover {
+.sponsor:hover,
+.sponsor:focus {
     scale: 1.1;
     box-shadow: 10px 10px 10px var(--clr-shadow);
 }
@@ -257,4 +262,92 @@ h1 {
     transform: translateY(clamp(2rem, 10vw, 10rem));
     background-color: var(--pink);
     clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
+}
+
+@media (max-width: 768px) {
+    
+
+    main {
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10vw;
+        
+    }
+
+    .hero > p {
+        transform: translateX(0px);
+        align-self: flex-start;
+        padding: 5%;
+    }
+
+    .hero > figure > img {
+        height: clamp(500px, 100vw, 800px);
+    }
+
+    .intro-section {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "about-me-1" 
+        "about-me-2"
+        "about-me-3"
+        "about-me-4";
+    }
+
+    .triangle-up,
+    .triangle-down {
+        width: 100%;
+        height: 100px;
+    }
+
+    .triangle-up {
+        transform: translateY(-100px);
+    }
+
+    .triangle-down {
+        transform: translateY(100px);
+    }
+
+    .wapper-sponsor {
+        width: 100%;
+        margin: 0;
+        margin-top: 20%;
+        gap: 50px;
+        display: grid;
+        align-content: center;
+        justify-items: center;
+    }
+
+    .cards-sponsor {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 20%;
+    }
+
+    .sponsor {
+        width: clamp(70%, 80vw, 90%);
+        text-align: center;
+        align-self: center;
+        justify-self: center;
+    }
+
+    #triangle-sponsor {
+        width: 100%;
+        height: 500px;
+    }
 }
