@@ -32,7 +32,7 @@ header {
   align-items: center;
   background-color: var(--pink);
   width: 100%;
-  min-height: clamp(100px, 12dvh, 170px);
+  min-height: clamp(100px, 8vh, 170px);
   padding: 10px;
 
   z-index: 10;
@@ -71,7 +71,7 @@ h2 {
 }
 
 h3 {
-  font-size: clamp(1.4rem, 2.2vw, 2.2rem);
+  font-size: clamp(2rem, 3vw, 3.5rem);
   line-height: 1.2;
   font-weight: bold;
 
