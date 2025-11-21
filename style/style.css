@@ -45,6 +45,31 @@ header > nav {
   position: relative;
 }
 
+header > nav > a {
+  position: relative;
+}
+
+header > nav > a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 1px;
+  background: var(--clr-title);
+  transition: width 0.4s ease;
+}
+
+header > nav > a:hover::after {
+  width: 100%;
+}
+
+header > nav > a:hover {
+  transform-origin: bottom;
+  transform: scale(1.1);
+  transition: transform 0.4s ease;
+}
+
 main {
   padding-top: clamp(130px, 12dvh, 170px);
   margin-left: clamp(10px, 2vw, 30px);
@@ -161,6 +186,7 @@ img {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    height: 150px;
   }
 
   main {
