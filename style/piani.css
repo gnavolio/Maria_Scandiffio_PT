@@ -1,0 +1,152 @@
+:root{
+  --pink: rgb(255, 160, 190);
+  --light-pink: rgb(255, 200, 221);
+  --blue: rgb(189, 224, 254);
+  --green: rgb(209, 244, 224);
+  --clr-tx: rgb(42, 42, 42);
+  --clr-title: rgb(255, 255, 255);
+  --clr-shadow: rgba(42, 42, 42, 0.25);
+  --radius: 18px;
+  --fs: 16px;
+
+  font-size: var(--fs);
+}
+
+body {
+    position: relative;
+}
+
+#bg-blue {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--blue);
+    clip-path: polygon(0 15%, 0 40%, 100% 80%, 100% 30%);
+    z-index: -1;
+}
+
+#bg-pink {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--pink);
+    clip-path: polygon(0 80%, 0 100%, 100% 100%, 100% 90%);
+    z-index: -1;
+}
+
+#link-piani {
+    color: var(--clr-title);
+}
+
+h1 {
+    margin-top: clamp(1rem, 2vw, 3rem);
+    font-size: clamp(2.5rem, 7vw, 6rem);
+    margin: 1.5rem 0 6rem 0;
+    margin-bottom: clamp(4rem, 10vw, 6rem);
+}
+
+h3 {
+    font-size: clamp(1.5rem, 3vw, 3rem);
+}
+
+main {
+    padding-left: clamp(5%, 10vw, 10%);
+    padding-right: clamp(5%, 10vw, 10%);
+}
+
+.wrapper-piani {
+    display: flex;
+    justify-content: space-around;
+    gap: 5%;
+}
+
+.piano {
+    background-color: var(--green);
+    border-radius: var(--radius);
+    overflow: hidden;
+    aspect-ratio: 3 / 6;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    transition: all 1s ease;
+    height: fit-content;
+}
+
+.piano > figure {
+    border-radius: var(--radius) var(--radius) 0 0;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+}
+
+.piano > figure > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.content-piano {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#scheda-alimentazione {
+  transform: scale(1.1);
+  transform-origin: center;
+}
+
+h2 {
+    margin-top: clamp(5rem, 5vw, 8rem);
+    margin-bottom: clamp(2rem, 5vw, 5.5rem);
+}
+
+h2 > span {
+    font-size: clamp(3.2rem, 8vw, 7rem);
+}
+
+.wrapper-risultati {
+    justify-self: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin-bottom: clamp(2rem, 5vw, 5.5rem);
+    gap: clamp(10px, 3vw, 40px);
+    width: 100%;
+}
+
+.wrapper-risultati > figure {
+    border-radius: var(--radius);
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+}
+
+.wrapper-risultati > figure > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .wrapper-piani {
+        flex-direction: column;
+    }
+
+    .piano {
+        margin-bottom: 15%;
+        width: 80%;
+        align-self: center;
+    }
+
+    .wrapper-risultati {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+}
