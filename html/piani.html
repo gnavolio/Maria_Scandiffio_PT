@@ -9,14 +9,13 @@
     <meta name="description" content="Sito ufficiale di Maria Scandiffio, atleta italiana di powerlifting. Pagina dedicata alla dimostrazione dei risultati ottenuti dai suoi clienti e dai piani disponibili.">
     
     <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/piani.css">
 </head>
 
 <body>
-<!-- 
-    <div class="bg">
-        <figure class="rectangle-blue"><img src="../assets/blue-rectangle-home-desktop.svg" aria-hidden="true"></figure>
-        <figure class="rectangle-pink"><img src="../assets/pink-rectangle-home-desktop.png" aria-hidden="true"></figure>
-    </div> -->
+
+    <div id="bg-blue"></div>
+    <div id="bg-pink"></div>
 
     <header>
         <figure><img src="../assets/logo-no-bg.png" alt="Logo ufficiale di Maria Scandiffio"></figure>
@@ -28,22 +27,61 @@
     </header>
 
     <main>
+        <h1>Scopri i piani disponibili</h1>
+
+        <section class="wrapper-piani">
+            <section class="piano box-shadow">
+                <figure><img src="../images/foto-scheda.jpg" alt="Immagine rappresentativa di un allenamento in palestra"></figure>
+                <div class="content-piano">
+                    <h3>Scheda</h3>
+                    <p><strong>Mensile:</strong><br>60€</p>
+                    <p><strong>Trimestrale:</strong><br>150€</p>
+                </div>
+            </section>
+            <section class="piano  box-shadow" id="scheda-alimentazione">
+                <figure><img src="../images/foto-scheda-alimentazione.jpg" alt="Immagine che rappresenta un allenamento in palestra con un corpo correttamente nutrito"></figure>
+                <div class="content-piano">
+                    <h3>Scheda<br>+<br>Alimentazione</h3>
+                    <p><strong>Mensile:</strong><br>80€</p>
+                    <p><strong>Trimestrale:</strong><br>200€</p>
+                </div>
+            </section>
+            <section class="piano  box-shadow">
+                <figure><img src="../images/foto-allenamento-casa.jpg" alt="Immagine di un allenamento dentro casa"></figure>
+                <div class="content-piano">
+                    <h3>Allenati<br>comodamente<br>a casa tua</h3>
+                    <p><strong>A lezione:</strong><br>20€</p>
+                </div>
+            </section>
+        </section>
+
+        <h2>Fidati dei<br><span>risultati</span><br>non delle parole</h2>
         
+        <section class="wrapper-risultati">
+            <figure class="box-shadow"><img src="../images/foto-allenamento-casa.jpg" alt=""></figure>
+            <figure class="box-shadow"><img src="../images/foto-allenamento-casa.jpg" alt=""></figure>
+            <figure class="box-shadow"><img src="../images/foto-allenamento-casa.jpg" alt=""></figure>
+            <figure class="box-shadow"><img src="../images/foto-allenamento-casa.jpg" alt=""></figure>
+            <figure class="box-shadow"><img src="../images/foto-allenamento-casa.jpg" alt=""></figure>
+            <figure class="box-shadow"><img src="../images/foto-allenamento-casa.jpg" alt=""></figure>
+        </section>
     </main>
 
     <footer>
-        <div class="contact">
+        <a class="contact" href="tel:3478734206">
             <img src="../assets/Phone.svg" alt="Icona telefono">
             3478734206
-        </div>
-        <div class="contact">
+        </a>
+
+        <a class="contact" href="mailto:mariascandiffio@hotmail.com">
             <img src="../assets/Mail.svg" alt="Icona email">
             mariascandiffio@hotmail.com
-        </div>
-        <div class="contact">
+        </a>
+        
+        <a class="contact" href="https://instagram.com/maria.scandiffiopl" target="_blank" rel="noopener noreferrer">
             <img src="../assets/Ig.svg" alt="Icona Instagram">
             maria.scandiffiopl
-        </div>
+        </a>
     </footer>
 </body>
 </html>
