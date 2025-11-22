@@ -76,6 +76,7 @@ h1 {
 }
 
 .hero > figure {
+    padding-top: 1rem;
     grid-area: hero-image;
     align-content: end;
     z-index: -2;
