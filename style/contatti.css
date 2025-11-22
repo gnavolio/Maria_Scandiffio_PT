@@ -1,0 +1,134 @@
+:root {
+  --pink: rgb(255, 160, 190);
+  --light-pink: rgb(255, 200, 221);
+  --blue: rgb(189, 224, 254);
+  --green: rgb(209, 244, 224);
+  --clr-tx: rgb(42, 42, 42);
+  --clr-title: rgb(255, 255, 255);
+  --clr-shadow: rgba(42, 42, 42, 0.25);
+  --radius: 18px;
+  --fs: 16px;
+
+  font-size: var(--fs);
+}
+
+body {
+  position: relative;
+}
+
+#bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--blue);
+  clip-path: polygon(33% 0, 66% 0, 100% 100%, 0 100%);
+  z-index: -1;
+}
+
+#link-contatti {
+  color: var(--clr-title);
+}
+
+h1 {
+  margin-top: 4%;
+  font-size: clamp(2.5rem, 4vw, 5rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 2vw, 3.3rem);
+}
+
+main {
+  position: relative;
+  min-height: 100vh;
+  padding-left: clamp(5%, 10vw, 10%);
+  padding-right: clamp(5%, 10vw, 10%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.wrapper-contatti {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 5%;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.card {
+  text-wrap: nowrap;
+  background-color: var(--green);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 100%;
+  max-width: 350px;
+  height: 450px;
+
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card > figure {
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+.card > figure > img {
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  font-size: clamp(0.9rem, 1.1vw, 2rem);
+  width: 100%;
+  background-color: var(--blue);
+  border: 1px solid var(--clr-title);
+  padding: 0.8rem 1rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  color: var(--clr-tx);
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 770px) {
+  main {
+    display: block;
+  }
+
+  .wrapper-contatti {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .card {
+    max-width: 90%;
+    height: auto;
+  }
+
+  .card > figure {
+    height: 250px;
+  }
+}
