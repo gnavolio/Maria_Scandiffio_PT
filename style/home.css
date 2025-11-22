@@ -18,6 +18,7 @@
 }
 
 .hero {
+    padding-top: ;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 2fr;
@@ -76,6 +77,7 @@ h1 {
 }
 
 .hero > figure {
+    padding-top: 1rem;
     grid-area: hero-image;
     align-content: end;
     z-index: -2;
