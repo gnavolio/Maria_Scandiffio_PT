@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gnavolio.github.io/Maria_Scandiffio_PT/html/sitemap.xml
